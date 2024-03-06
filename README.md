@@ -1,3 +1,23 @@
+# Abracadabra MIMSwap On Blast
+
+This repo is a curated version of our main repository `https://github.com/Abracadabra-money/abracadabra-money-contracts` so that it contains the minimal codebase required for this product.
+
+## Prerequisites
+- Node ideally v20 but earlier version should work as well.
+- Yarn
+- Linux / MacOS / WSL 2
+- Blast archive RPC (ankr, quicknode for example)
+- Arbitrum archive RPC url to run the `LockingMultiRewards` tests
+- Ethereum archive RPC url to run the `MagicLpAggregator` tests
+
+## Fork Testing
+- set the required rpc urls `BLAST_RPC_URL`, `MAINNET_RPC_URL` and  `ARBITRUM_RPC_URL` in `.env.defaults` or ideally a `.env` file.
+
+## Blast
+Mocks are used for Blast precompiles as it doesn't seems to be supported natively by Foundry at this time.
+They can be found in `utils/mocks/BlastMock.sol`. It's only used when fork testing and deploying.
+
+-----------
 
 # Repo setup
 

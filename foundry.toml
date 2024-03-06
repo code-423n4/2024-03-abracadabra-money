@@ -1,0 +1,59 @@
+[profile.default]
+solc_version = "0.8.20"
+evm_version = "paris" # switch to shanghai once it's supported on L2
+auto_detect_solc = false
+optimizer = true
+optimizer_runs = 400 # fails at 1_000 because certain contracts become too large
+src = 'src'
+out = 'out'
+libs = ['lib']
+verbosity = 1
+via_ir = false
+remappings = [
+    '/=src',
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts",
+    'BoringSolidity/=lib/BoringSolidity/contracts/',
+    'ds-test/=lib/forge-std/lib/ds-test/src/',
+    'forge-std/=lib/forge-std/src/',
+    'solmate/=lib/solmate/src/',
+    'utils/=utils',
+    'libraries/=src/libraries',
+    'interfaces/=src/interfaces',
+    'cauldrons/=src/cauldrons',
+    'staking/=src/staking',
+    'oracles/=src/oracles',
+    'tokens/=src/tokens',
+    'mixins/=src/mixins',
+    'solady/=lib/solady/src/',
+    'forge-deploy/=lib/forge-deploy/contracts',
+]
+auto_detect_remappings = false
+match-path = "test/**/*.t.sol"
+match-contract = "Test$"
+ffi = false
+fs_permissions = [
+    { access = "read-write", path = "./deployments" },
+    { access = "read", path = "./out" },
+    { access = "read", path = "./config" },
+]
+
+[profile.ci]
+verbosity = 4
+
+[profile.ci.fuzz]
+verbosity = 4
+runs = 256
+
+[fuzz]
+runs = 256
+max_test_rejects = 65536
+seed = '0x3e8'
+dictionary_weight = 40
+include_storage = true
+include_push_bytes = true
+
+[invariant]
+runs = 30
+depth = 15
+fail_on_revert = true
+# See more config options https://book.getfoundry.sh/reference/config/
