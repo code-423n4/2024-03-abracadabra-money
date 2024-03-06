@@ -61,7 +61,7 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 # Scope
 
 | Contract| SLOC| 
-| -------- | -------: |
+| :------- | -------: |
 |[src/blast/BlastDapp.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/blast/BlastDapp.sol) |   7   |
 |[src/blast/BlastBox.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/blast/BlastBox.sol) |    65  |
 |[src/blast/BlastGovernor.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/blast/BlastGovernor.sol) |   35   |
