@@ -1,10 +1,10 @@
 # Abracadabra Money audit details
-- Total Prize Pool: $48,000 in USDC
-  - HM awards: $37050 in USDC
-  - QA awards: $975 in USDC 
-  - Gas awards: $975 in USDC
-  - Judge awards: $5100 in USDC
-  - Lookout awards: $3,400 in USDC
+- Total Prize Pool: $63,000 in USDC
+  - HM awards: $49,875 in USDC
+  - QA awards: $1,312.50 in USDC 
+  - Gas awards: $1,312.50 in USDC
+  - Judge awards: $6,000 in USDC
+  - Lookout awards: $4000 in USDC
   - Scout awards: $500 in USDC
  
 - Join [C4 Discord](https://discord.gg/code4rena) to register
