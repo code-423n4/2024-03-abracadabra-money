@@ -10,8 +10,8 @@
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-03-abracadabra-money/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts March 7, 2024 20:00 UTC
-- Ends March 12, 2024 20:00 UTC
+- Starts March 7, 2024, 20:00 UTC
+- Ends March 12, 2024, 20:00 UTC
 
 ## Automated Findings / Publicly Known Issues
 
@@ -21,28 +21,28 @@ The 4naly3er report can be found [here](https://github.com/code-423n4/2024-03-ab
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._
 
 # Abracadabra MIMSwap On Blast
-This repo is a curated version of our main repository `https://github.com/Abracadabra-money/abracadabra-money-contracts` so that it contains the minimal codebase required for this product.
+This repo is a curated version of our main repository `https://github.com/Abracadabra-money/abracadabra-money-contracts` so it contains the minimal codebase required for this product.
 
 # Overview
 
-MIMSwap is a fork of Dodo V2 but refactored, so it's more aligned with our needs. The math formula weren't changed.
+MIMSwap is a fork of Dodo V2 but refactored, so it's more aligned with our needs. The math formula wasn't changed.
 
-- We ported it to Solidity 0.8. You can compare with the original repo here:
+- We ported it to Solidity 0.8. You can compare it with the original repo here:
 https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 
 - We are using a Mix of DSP + private pool
 - We made our own Factory  / Router periphery
 - MagicLpAggregator would be used to price MagicLP collateral for Cauldrons
-- Some contracts were wrapped so it's usuable with Blast L2 yield claiming
-- BlastOnboarding is currently live and it's a LLE where people deposit MIM/USDB and once ready we would upgrade BlastOnboarding implementation to use BlastOnboardingBoot
-- BlastOnboarding source code is a bit different from the live version because we improved how we can claim the yields post-deployment. It was changed in case we want to run another LLE in the futur.
+- Some contracts were wrapped so it's usable with Blast L2 yield claiming
+- BlastOnboarding is currently live and it's an LLE where people deposit MIM/USDB once ready we would upgrade the BlastOnboarding implementation to use BlastOnboardingBoot
+- BlastOnboarding source code is a bit different from the live version because we improved how we can claim the yields post-deployment. It was changed in case we want to run another LLE in the future.
 - BlastOnboardingBoot would create a single MagicLP for MIM/USDB
 - People will be able to claim their LP and stake it locked or not to get extra Blast point boosting
-- People that deposited unlocked into the LLE can withdraw at any time during and after
-- Only the one that locked during the LLE can claim a share of the MagicLP and optionaly stake (locked or not).
+- People who deposited unlocked into the LLE can withdraw at any time during and after
+- Only the one that locked during the LLE can claim a share of the MagicLP and optionally stake (locked or not).
 - MagicLP staking uses LockingMultiRewards
 - LockingMultiRewards is a fork of Curve MultiRewards.
-- LockingMultiRewards allows to stake, lock or unlocked during 13 weeks. Locks are released by a Gelato task offchain. An epoch is 7 days. Rewards are distributed during the epoch. The rewards claimed during an epoch are only available the other epoch + the rewards from the previous epoch if any.
+- LockingMultiRewards allows you to stake, lock, or unlock during 13 weeks. Locks are released by a Gelato task offchain. An epoch is 7 days. Rewards are distributed during the epoch. The rewards claimed during an epoch are only available in the other epoch + the rewards from the previous epoch if any.
 
 
 ## Links
@@ -52,7 +52,7 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 - MIMSwap V2 is based on [DODO V2](https://docs.dodoex.io/en/home/what-is-dodo)
 - DODO PMM Algorithm [Whitepaper](https://www.securities.io/wp-content/uploads/2022/05/DODO.pdf)
 
-  Note From Abracadabra Money: _It's the same algo for V2 but in V2 the Oracle is replace with an I constant._
+  Note From Abracadabra Money: _It's the same algo for V2 but in V2 the Oracle is replaced with an I constant._
 - **Website:** [Here](https://abracadabra.money/)
 - **Twitter:** [Here](https://twitter.com/MIM_Spell)
 - **Discord:** [Here](https://discord.com/invite/mim)
@@ -88,10 +88,12 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 * The items acknowledged in the [previous audit](https://github.com/Abracadabra-money/abracadabra-money-contracts/blob/main/audits/2024-02-06_Abracadabra_LockingMultiRewards.pdf) is Out Of Scope.
 
 * `BlastOnboarding` Contract Known issues (acknowledged):
-The BlastOnboarding contract is itself a proxy, however it has several declared storage variables and functions. As a result the contract is prone to storage and function selector collision.
+The BlastOnboarding contract is a proxy, but it has several declared storage variables and functions. As a result, the contract is prone to storage and function selector collision.
 
 * `BlastBox` Contract Known issues (acknowledged):
-If the owner does not want to enable native yield for a token with function `setTokenEnabled`, that token will have the default mode which is AUTOMATIC for WETH and USDB. When a token is in AUTOMATIC mode, the balance of the token in the contract increases as yield is gained. However, the DegenBox contract is unable to support rebasing tokens.
+If the owner does not want to enable native yield for a token with the function `setTokenEnabled`, that token will have the default mode which is AUTOMATIC for WETH and USDB. When a token is in AUTOMATIC mode, the balance of the token in the contract increases as yield is gained. However, the DegenBox contract is unable to support rebasing tokens.
+
+* Any reports submitted outside of the scoped contracts are Out Of Scope.
 
 
 ## Scoping Details 
@@ -105,9 +107,9 @@ If the owner does not want to enable native yield for a token with function `set
 - Does most of your code generally use composition or inheritance?: Inheritance   
 - How many external calls?: 10
 - What is the overall line coverage percentage provided by your tests?: 60
-- Is this an upgrade of an existing system?: True - MIMSwap + MagicLP oracle to be use for Cauldrons. Blast Versions of the MIMSwap/DegenBox/CauldronV4 contracts to allow yields (mostly inherited except BlastMagicLP), MultiReward with Locking, BlastOnboarding (an LLE to bootstrap liquidity for MIMSwap launch) and an Upgrade implementation for the BlastOnboarding: BlastOnboardingBoot to bootstrap the liquidity and allow users to claim their LP share and stake automatically
+- Is this an upgrade of an existing system?: True - MIMSwap + MagicLP oracle to be used for Cauldrons. Blast Versions of the MIMSwap/DegenBox/CauldronV4 contracts to allow yields (mostly inherited except BlastMagicLP), MultiReward with Locking, BlastOnboarding (an LLE to bootstrap liquidity for MIMSwap launch) and an Upgrade implementation for the BlastOnboarding: BlastOnboardingBoot to bootstrap the liquidity and allow users to claim their LP share and stake automatically
 - Check all that apply (e.g. timelock, NFT, AMM, ERC20, rollups, etc.): AMM, Uses L2, Multi-Chain, ERC-20 Token 
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?: False   
+- Is there a need to understand a separate part of the codebase / get context to audit this part of the protocol?: False   
 - Please describe required context:
 - Does it use an oracle?: Chainlink
 - Describe any novel or unique curve logic or mathematical models your code uses: MIMSwap is a fork of dodo v2 
@@ -120,9 +122,9 @@ If the owner does not want to enable native yield for a token with function `set
 - Node ideally v20 but earlier version should work as well.
 - Yarn
 - Linux / MacOS / WSL 2
-- Blast archive RPC (ankr, quicknode for example)
-- Arbitrum archive RPC url to run the `LockingMultiRewards` tests
-- Ethereum archive RPC url to run the `MagicLpAggregator` tests
+- Blast archive RPC (Ankr, Quicknode for example)
+- Arbitrum archive RPC URL to run the `LockingMultiRewards` tests
+- Ethereum archive RPC URL to run the `MagicLpAggregator` tests
 - Set the required rpc urls `BLAST_RPC_URL`, `MAINNET_RPC_URL` and `ARBITRUM_RPC_URL` in `.env.defaults` or ideally a `.env` file.
 
 ## Install
@@ -135,7 +137,7 @@ If the owner does not want to enable native yield for a token with function `set
 We are using foundry scripts for any live deployments and the same ones are used when fork testing.
 
 ## Blast
-Mocks are used for Blast precompiles as it doesn't seems to be supported natively by Foundry at this time.
+Mocks are used for Blast precompiles as it doesn't seem to be supported natively by Foundry at this time.
 They can be found in `utils/mocks/BlastMock.sol`. It's only used when fork testing and deploying.
 
 ## Miscellaneous
