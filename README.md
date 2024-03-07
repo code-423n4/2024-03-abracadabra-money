@@ -85,7 +85,7 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 
 ## Out of scope
 
-* The items acknowledged in the [previous audit](https://github.com/Abracadabra-money/abracadabra-money-contracts/blob/main/audits/2024-02-06_Abracadabra_LockingMultiRewards.pdf) is Out Of Scope.
+* The items acknowledged in the [previous audit](https://github.com/Abracadabra-money/abracadabra-money-contracts/blob/main/audits/2024-02-06_Abracadabra_LockingMultiRewards.pdf) are Out Of Scope.
 
 * `BlastOnboarding` Contract Known issues (acknowledged):
 The BlastOnboarding contract is a proxy, but it has several declared storage variables and functions. As a result, the contract is prone to storage and function selector collision.
