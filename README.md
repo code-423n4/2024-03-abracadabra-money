@@ -32,7 +32,7 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 
 - We are using a Mix of DSP + private pool
 - We made our own Factory  / Router periphery
-- MagicLpAggregator would be used to price MagicLP collateral for Cauldrons
+- MagicLpAggregator would be used to price MagicLP collateral for Cauldrons. Something to note is that the MagicLP Oracle is only meant for closed-together price pool. It's just that the oracle is not meant to be used for any kind of MagicLP, just for closely priced tokens like MIM/USDB.
 - Some contracts were wrapped so it's usable with Blast L2 yield claiming
 - BlastOnboarding is currently live and it's an LLE where people deposit MIM/USDB once ready we would upgrade the BlastOnboarding implementation to use BlastOnboardingBoot
 - BlastOnboarding source code is a bit different from the live version because we improved how we can claim the yields post-deployment. It was changed in case we want to run another LLE in the future.
@@ -42,7 +42,7 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 - Only the one that locked during the LLE can claim a share of the MagicLP and optionally stake (locked or not).
 - MagicLP staking uses LockingMultiRewards
 - LockingMultiRewards is a fork of Curve MultiRewards.
-- LockingMultiRewards allows you to stake, lock, or unlock during 13 weeks. Locks are released by a Gelato task offchain. An epoch is 7 days. Rewards are distributed during the epoch. The rewards claimed during an epoch are only available in the other epoch + the rewards from the previous epoch if any.
+- LockingMultiRewards allows you to stake, lock, or unlock for 13 weeks. Locks are released by a Gelato task offchain. An epoch is 7 days. Rewards are distributed during the epoch. The rewards claimed during an epoch are only available in the other epoch + the rewards from the previous epoch if any.
 
 
 ## Links
