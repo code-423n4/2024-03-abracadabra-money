@@ -1,4 +1,4 @@
-# Abracadabra Money audit details
+# Abracadabra Mimswap audit details
 - Total Prize Pool: $63,000 in USDC
   - HM awards: $49,875 in USDC
   - QA awards: $1,312.50 in USDC 
