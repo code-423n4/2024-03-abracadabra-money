@@ -8,7 +8,7 @@
   - Scout awards: $500 in USDC
  
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/2024-03-abracadabra-money/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2024-03-abracadabra-mimswap/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts March 7, 2024, 20:00 UTC
 - Ends March 12, 2024, 20:00 UTC
@@ -142,4 +142,4 @@ They can be found in `utils/mocks/BlastMock.sol`. It's only used when fork testi
 
 ## Miscellaneous
 
-Employees of [Abracadabra Money] and employees' family members are ineligible to participate in this audit.
+Employees of Abracadabra Money and employees' family members are ineligible to participate in this audit.
