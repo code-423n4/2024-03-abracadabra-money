@@ -72,7 +72,7 @@ https://github.com/DODOEX/contractV2/tree/main/contracts/DODOStablePool
 |[src/blast/BlastWrappers.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/blast/BlastWrappers.sol) |   57   |
 |[src/blast/libraries/BlastPoints.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/blast/libraries/BlastPoints.sol) |   9   |
 |[src/blast/libraries/BlastYields.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/blast/libraries/BlastYields.sol) |    51  |
-|[src/mimswap/MagicLP.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/mimswap/MagicLP.sol) |  76    |
+|[src/mimswap/MagicLP.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/mimswap/MagicLP.sol) |  444   |
 |[src/mimswap/auxiliary/FeeRateModel.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/mimswap/auxiliary/FeeRateModel.sol) |  33    |
 |[src/mimswap/auxiliary/FeeRateModelImpl.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/mimswap/auxiliary/FeeRateModelImpl.sol) |    9  |
 |[src/mimswap/libraries/DecimalMath.sol](https://github.com/code-423n4/2024-03-abracadabra-money/blob/main/src/mimswap/libraries/DecimalMath.sol) |   39   |
