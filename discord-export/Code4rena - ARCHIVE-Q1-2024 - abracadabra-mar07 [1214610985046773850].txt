@@ -1,0 +1,520 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q1-2024 / abracadabra-mar07
+==============================================================
+
+[03/07/2024 01:06] knownfactc4_29311 (pinned)
+👋 Hello and welcome to the audit channel for the $63,000 in USDC **Abracadabra Mimswap** audit!
+
+📆 Audit opens 03/07/2024 20:00 (20:00 UTC) and runs through 03/12/2024 19:00 (20:00 UTC) (5 days).
+
+Please give a warm welcome to the Abracadabra team, particularly @0xCalibur, @0xmDreamy, and @Romy  who will be available for questions either here in the channel or via a PRIVATE thread.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/audits/2024-03-abracadabra-mimswap
+
+{Reactions}
+✅ (5) 🇮🇳 (2) 
+
+[03/07/2024 16:11] kartik_giri_47538
+Hey everyone looking forward to work with you guys 😄
+
+
+[03/07/2024 17:42] knownfactc4_29311
+Pinned a message.
+
+
+[03/07/2024 20:02] C4 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Reminder: all [Automated Findings / Publicly Known Issues](https://github.com/code-423n4/2024-03-abracadabra-money#automated-findings--publicly-known-issues) are out of scope and ineligible for awards.
+
+{Embed}
+https://github.com/code-423n4/2024-03-abracadabra-money
+GitHub - code-423n4/2024-03-abracadabra-money
+Contribute to code-423n4/2024-03-abracadabra-money development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q1-2024 - abracadabra-mar07 [1214610985046773850].txt_Files/da235773-bc17-4fd4-93fb-284e34086be2-96DB1
+
+
+[03/07/2024 20:05] kartoonjoy
+Pinned a message.
+
+
+[03/07/2024 20:22] trust90
+Taking this on ✅
+
+{Reactions}
+🔥 (7) ✅ (4) 👀 (2) 
+
+[03/07/2024 20:22] shealtielanz
+Omo
+
+{Reactions}
+😂 
+
+[03/07/2024 21:05] kingx0001
+wahalaaa
+
+{Reactions}
+😂 (2) 
+
+[03/07/2024 21:10] 0xwizard
+just for confirmation, MagicLP.sol seems to be 444SLOC not 76
+
+
+[03/07/2024 21:10] 0xwizard
+can anyone confim that>
+
+
+[03/07/2024 21:10] 0xwizard
+??
+
+
+[03/08/2024 04:18] 0xsorrynotsorry
+Yeah, you're right. It's my fault during preparation of the repo. Good catch
+
+
+[03/08/2024 05:09] 0xwizard
+@sorryNotsorry thanks for your response
+
+{Reactions}
+🫡 
+
+[03/08/2024 05:10] 0xwizard
+If you could ping the team, so they can respond to the private thread
+
+
+[03/08/2024 05:10] 0xwizard
+I would really appreciate it
+
+
+[03/08/2024 05:56] 0xsorrynotsorry
+Well, I´m not part of the Team, but I´m sure that the Sponsors will be replying as per their time zone avails.
+
+{Reactions}
+🫡 
+
+[03/08/2024 11:22] _m4ttm
+No scope.txt 🙁
+
+
+[03/08/2024 13:53] jvorex
+maby you can use this
+
+
+[03/08/2024 13:53] jvorex
+src/blast/BlastDapp.sol
+src/blast/BlastBox.sol
+src/blast/BlastGovernor.sol
+src/blast/BlastMagicLP.sol
+src/blast/BlastOnboarding.sol
+src/blast/BlastOnboardingBoot.sol
+src/blast/BlastTokenRegistry.sol
+src/blast/BlastWrappers.sol
+src/blast/libraries/BlastPoints.sol
+src/blast/libraries/BlastYields.sol
+src/mimswap/MagicLP.sol
+src/mimswap/auxiliary/FeeRateModel.sol
+src/mimswap/auxiliary/FeeRateModelImpl.sol
+src/mimswap/libraries/DecimalMath.sol
+src/mimswap/libraries/Math.sol
+src/mimswap/libraries/PMMPricing.sol
+src/mimswap/periphery/Factory.sol
+src/mimswap/periphery/Router.sol
+src/oracles/aggregators/MagicLpAggregator.sol
+src/staking/LockingMultiRewards.sol
+
+
+[03/08/2024 14:18] _m4ttm
+Yeah I've done it now. I thought it was always there on c4 but maybe not
+
+
+[03/08/2024 14:30] kartoonjoy
+You arent wrong. We will normally have the file. Thanks for the flexibility.
+
+
+[03/08/2024 16:16] saint6704
+where are the automated findings from bots?
+
+
+[03/08/2024 16:16] sp1cymeatball
+So there is the BlastOnboarding contract where people lock their tokens, when the time comes owner will set it's state to close and change the implementation to BlastOnboardingBoot?
+
+
+[03/08/2024 16:44] kartoonjoy
+You don't see it linked?
+
+
+[03/08/2024 17:28] saint6704
+I can see ` 4naly3er` report but can't see report from bot race
+
+
+[03/08/2024 17:29] kartoonjoy
+There was no bot race for this one.
+
+
+[03/08/2024 17:44] saint6704
+Ohh okay 👌👌
+
+{Reactions}
+hi5 (2) 
+
+[03/08/2024 17:48] aamirusmani1552
+getting this error when running tests:
+
+```bash
+Running 1 test for test/BlastOnboarding.t.sol:BlastOnboardingTest
+[FAIL. Reason: setup failed: backend: failed while inspecting: Database error: failed to get account for 0x4200000000000000000000000000000000000011: Deserialization error: expected value at line 1 column 1] setUp() (gas: 0)
+Test result: FAILED. 0 passed; 1 failed; 0 skipped; finished in 8.17s
+2024-03-08T17:46:30.398962Z ERROR sharedbackend: Failed to send/recv `basic` err=failed to get account for 0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5: Deserialization error: expected value at line 1 column 1 address=0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5
+2024-03-08T17:46:30.399045Z ERROR forge::runner: setUp failed reason=backend: failed while inspecting: Database error: failed to get account for 0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5: Deserialization error: expected value at line 1 column 1 contract=0x7FA9385bE102ac3EAc297483Dd6233D62b3e1496
+```
+
+
+[03/08/2024 17:54] 0xcalibur
+It's a problem with your blast rpc
+
+
+[03/08/2024 17:54] 0xcalibur
+(most likely)
+
+
+[03/08/2024 17:54] aamirusmani1552
+I used it from thirdweb. It's not available on infura I think.
+
+
+[03/08/2024 17:55] 0xcalibur
+quicknode and ankr provides blast rpc with full archive support
+
+
+[03/08/2024 17:55] aamirusmani1552
+oh. let me check
+
+
+[03/08/2024 17:58] aamirusmani1552
+Still same issue
+
+
+[03/08/2024 17:58] aamirusmani1552
+Used ankr rpc
+
+
+[03/08/2024 19:12] 0xcalibur
+Yeah so it's really a RPC issue, try to print it in the test to verify it's using the right one but normally you set it in .env
+
+
+[03/08/2024 19:13] 0xcalibur
+this is what I have in my .env
+
+
+[03/08/2024 19:14] 0xcalibur
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q1-2024 - abracadabra-mar07 [1214610985046773850].txt_Files/image-B6F9C.png
+
+
+[03/08/2024 22:56] kingx0001
+can anyone who run the test successfully please send their remapping?
+
+
+[03/08/2024 22:56] kingx0001
+not working ove here
+
+
+[03/09/2024 05:55] aamirusmani1552
+Yeah it worked. Forgot to copy the API key. Thanks
+
+
+[03/09/2024 05:56] aamirusmani1552
+Mine is working fine with default setup. Didn't change any remappings
+
+
+[03/09/2024 06:22] kingx0001
+did u clone with recurse?
+
+
+[03/09/2024 06:23] aamirusmani1552
+nope.
+
+
+[03/09/2024 06:27] kingx0001
+sorry, can i dm u? 
+dont wanna spam here, lol
+
+
+[03/09/2024 06:27] kingx0001
+if u dont mind
+
+
+[03/09/2024 06:27] aamirusmani1552
+sure
+
+{Reactions}
+❤️ 
+
+[03/09/2024 10:23] sp1cymeatball
+@0xCalibur hi! Can you share BlastOnboarding.sol address?
+
+
+[03/09/2024 11:33] mdrmy
+`0xa64B73699Cc7334810E382A4C09CAEc53636Ab96`
+
+{Reactions}
+thankyou (2) 
+
+[03/09/2024 11:35] kartoonjoy (pinned)
+**Wardens please note**: the analyzer report for this audit is linked in the repo.
+
+There no additional bot report.
+
+
+[03/09/2024 11:36] kartoonjoy
+Pinned a message.
+
+
+[03/10/2024 07:13] blutorque
+@0xCalibur PMed
+
+
+[03/11/2024 14:15] 0xcalibur (pinned)
+To everyone, LockingMultiRewards is definitely meant to be used ERC20 tokens, we didn't think about anything else as a standard really. Just meticulously chosen reward tokens here like ARB (arbitrum), SPELL
+
+
+[03/11/2024 19:17] kartoonjoy
+Pinned a message.
+
+
+[03/12/2024 20:00] haxatron1
+Gg
+
+
+[03/12/2024 20:00] haxatron1
+Surpised to see ghost town for this one
+
+{Reactions}
+4739_Skeletor (2) 
+
+[03/12/2024 20:00] jvorex
+wait for it
+
+{Reactions}
+👀 
+
+[03/12/2024 20:00] haxatron1
+We hope its the same way in backstage repo
+
+
+[03/12/2024 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **Abracadabra Mimswap** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+
+[03/12/2024 20:02] thisvishalsingh
+Issues left to subbmit ! 5HM
+
+
+[03/12/2024 20:03] parthmandale
+Same this side! Next time we'll improve this
+
+
+[03/12/2024 20:03] haxatron1
+Im afraid its over
+
+
+[03/12/2024 20:28] 0x11singh99
+235 Nice
+
+{Reactions}
+🫢 (3) 👀 (3) 
+
+[03/12/2024 20:47] haxatron1
+Damn this is going to be like all the rust competitions
+
+
+[03/12/2024 20:47] haxatron1
+Iykyk
+
+{Reactions}
+🎆 (3) 
+
+[03/13/2024 14:28] 0xhelium
+What laptop do you use for auditing? I see you in all them audits chat
+
+{Reactions}
+🤣 (12) 
+
+[03/28/2024 14:14] neon2835
+any update ?
+
+
+[03/28/2024 14:42] haxatron1
+😂
+
+
+[03/28/2024 16:32] hellocccz
+Just got it to me and will start judging asap🫡
+
+{Reactions}
+thankyou (9) 
+
+[04/03/2024 17:10] xyzbtchunt
+Any update ser?
+
+
+[04/05/2024 07:35] hellocccz
+Still in judging, I'll inform you all here once the judging is done
+
+{Reactions}
+👍 (4) 
+
+[04/07/2024 15:44] hellocccz
+Judging is done, will wrap them up to C4 Staff
+
+{Reactions}
+👍 (7) 
+
+[04/08/2024 00:13] bluesky_hope
+https://github.com/code-423n4/org/issues/157
+Some guys asked me: "hey, did you post this?"
+Please use your C4's id.
+
+{Embed}
+https://github.com/code-423n4/org/issues/157
+❗️PJQA Guidelines❗️ · Issue #157 · code-423n4/org
+Currently, Supreme Judges are permitted to participate in contests. However, in PJQA, they often resort to citing verdicts from the Supreme Court. These verdicts are subject to interpretation by th...
+Code4rena - ARCHIVE-Q1-2024 - abracadabra-mar07 [1214610985046773850].txt_Files/157-94DFE
+
+{Reactions}
+👀 
+
+[04/08/2024 15:41] xyzbtchunt
+Wen result?
+
+
+[04/09/2024 21:21] thebrittfactor
+🤑 🎉  Awards for **Abracadabra**:
+
+$14,067.25 USDC » @Trust 
+$9,498.41 USDC » @ether_sky
+$5,548.59 USDC » DarkTower (@0xrex and @haxatron)
+$3,838.37 USDC » @SpicyMeatball
+$2,258.68 USDC » @Bauchibred
+$2,068.88 USDC » @Limbooo
+$2,068.88 USDC » @Matin
+$2,068.88 USDC » @hassanshakeel13
+$2,068.88 USDC » yixxas
+$2,014.53 USDC » @Breeje
+$1,118.36 USDC » @hals
+$949.26 USDC » @blutorque
+$740.43 USDC » @ZanyBonzy
+$525.81 USDC » @hihen
+$474.94 USDC » @0x11singh99
+$443.43 USDC » @grearlake
+$377.05 USDC » @0xAadi
+$305.37 USDC » bareli
+$224.16 USDC » @Bigsam
+$214.67 USDC » @slvDev
+$208.83 USDC » @AgileJune
+$208.83 USDC » roguereggiant
+$184.90 USDC » @bozho
+$184.90 USDC » @Albahaca
+$184.90 USDC » @oualidpro
+$169.57 USDC » @Sathish9098
+$169.57 USDC » @dharma09
+$156.62 USDC » @Neon2835
+$40.20 USDC » @pfapostol
+$24.87 USDC » clara
+$15.33 USDC » @0xE1
+$15.33 USDC » @0xJaeger
+$15.33 USDC » @HChang26
+$15.33 USDC » @hassan-truscova
+$15.33 USDC » @ravikiranweb3
+$15.33 USDC » @zhaojie
+
+🏁 Findings summary
+-------------------------------------
+High risk findings: 4 unique (8 total)
+Med risk findings: 16 unique (34 total)
+Gas reports: 10 (Best: hihen)
+QA reports: 25 (Best: ether_sky)
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🎉 (8) hi5 (2) 
+
+[04/09/2024 23:06] 0xwizard
+who did the juding on this on
+
+{Reactions}
+💀 
+
+[04/09/2024 23:07] 0xwizard
+on this one???
+
+
+[04/10/2024 12:02] bluesky_hope
+Congratulations, @haxatron , @0xrex , @blutorque 
+You did a great job!
+
+{Reactions}
+hi5 (3) 
+
+[04/10/2024 12:03] haxatron1
+Thanks @ether_sky! You are a beast!
+
+{Reactions}
+thankyou 
+
+[04/10/2024 12:04] jvorex
+just learning from you; master 🫡
+
+{Reactions}
+🙌🏻 
+
+[04/10/2024 14:16] oxtenma
+Congrats @0xrex @haxatron
+
+{Reactions}
+hi5 (2) 
+
+[04/10/2024 14:56] aman_1602
+Congratulations @ether_sky
+
+
+[04/10/2024 14:57] bluesky_hope
+Thanks, bro
+
+
+[04/12/2024 19:00] itsmetechjay
+ℹ️ This channel is pending archive.   As a result, any private threads will be permanently deleted on Friday, 19 April 2024. Please make sure to grab anything you might need before then.
+
+
+[04/12/2024 22:29] xyzbtchunt
+this reward been sent?
+
+
+[04/13/2024 05:34] tigerfrake
+Naah, Watch out  for a ping in the #📢announcements
+
+{Reactions}
+chefskiss 
+
+[04/17/2024 17:14] stockmart
+Started a thread.
+
+
+[04/18/2024 20:27] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 88 message(s)
+==============================================================
